@@ -15,10 +15,12 @@ function init() {
 
   const authorization = client.getToken();
   console.log(authorization)
-  //authorization.then((session) => {
-  //  store.setToken(session.access_token);
-  //});
-
+  authorization.then((session) => {
+    var token = session.access_token;
+  }); 
+  var header = {headers: {'Authorization': 'Bearer ' + token}};
+  console.log(header);
+  document.getElementById().innerHTML = token
   return authorization;
 }
 
