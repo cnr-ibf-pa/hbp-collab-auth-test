@@ -21,6 +21,4 @@ function init() {
   return authorization;
 }
 
-export default {
-  init,
-};
+init();
