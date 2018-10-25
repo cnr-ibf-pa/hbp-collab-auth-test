@@ -14,9 +14,10 @@ function init() {
   }
 
   const authorization = client.getToken();
-  authorization.then((session) => {
-    store.setToken(session.access_token);
-  });
+  console.log(authorization)
+  //authorization.then((session) => {
+  //  store.setToken(session.access_token);
+  //});
 
   return authorization;
 }
