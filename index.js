@@ -20,7 +20,7 @@ authorization.then((session) => {
 var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
 document.getElementById("hbp-token").innerHTML = session.access_token;
 console.log(header);
-$.get(USER_API, header);
+$.get(USER_API);
 //$.getJSON(USER_API, header)
 //    .then(function (response) {
 //       resolve(response.data);
