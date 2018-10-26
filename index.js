@@ -22,7 +22,7 @@ document.getElementById("hbp-token").innerHTML = session.access_token;
 console.log(header);
 	
 	    $.ajax({
-        url: 'USER_API',
+        url: USER_API,
         headers: {
             'Authorization':'Bearer ' + session.access_token,
             'Content-Type':'application/json'
