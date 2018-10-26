@@ -22,11 +22,11 @@ console.log(header);
 this.$http.get(USER_API, header)
     .then(function (response) {
        resolve(response.data);
-       console.log(response.data)
-     },
+       console.log(response.data);
  }); 
   
   return authorization;
 }
+		   
 
 init();
