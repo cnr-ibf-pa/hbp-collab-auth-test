@@ -14,8 +14,8 @@ function init() {
   }
 
 const USER_API = 'https://services.humanbrainproject.eu/idm/v1/api/user/me';
-const authorization = client.getToken();
-const authorization = client.renewToken();
+var authorization = client.getToken();
+authorization = client.renewToken();
 console.log(authorization)
 authorization.then((session) => {
 var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
