@@ -18,7 +18,7 @@ function init() {
   authorization.then((session) => {
     var token = session.access_token;
   }); 
-  var header = {headers: {'Authorization': 'Bearer ' + token}};
+  var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
   console.log(header);
   document.getElementById().innerHTML = token
   return authorization;
