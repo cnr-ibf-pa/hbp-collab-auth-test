@@ -12,14 +12,19 @@ function init() {
   } catch (e) {
     console.warn('Issue decoding the token');
   }
-
-  const authorization = client.getToken();
-  console.log(authorization)
-  authorization.then((session) => {
-  var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
-  document.getElementById("hbp-token").innerHTML = session.access_token
-  console.log(header);
-  }); 
+const USER_API = 'https://services.humanbrainproject.eu/idm/v1/api/user/me'
+const authorization = client.getToken();
+console.log(authorization)
+authorization.then((session) => {
+var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
+document.getElementById("hbp-token").innerHTML = session.access_token
+console.log(header);
+this.$http.get(USER_API, header)
+    .then(function (response) {
+       resolve(response.data);
+       console.log(response.data)
+     },
+ }); 
   
   return authorization;
 }
