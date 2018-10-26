@@ -27,6 +27,8 @@ this.$http.get(USER_API, header)
   
   return authorization;
 });
+
+}
 		   
 
 init();
