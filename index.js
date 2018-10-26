@@ -29,7 +29,7 @@ console.log(header);
         },
         method: 'GET',
         success: function(data){
-          console.log('succes:');
+          console.log(data);
         }
       });
 	
