@@ -13,7 +13,7 @@ function init() {
     console.warn('Issue decoding the token');
   }
 
-const USER_API = 'https://services.humanbrainproject.eu/idm/v1/api/user/me/';
+const USER_API = 'https://services.humanbrainproject.eu/idm/v1/api/user/me';
 const authorization = client.getToken();
 console.log(authorization)
 authorization.then((session) => {
