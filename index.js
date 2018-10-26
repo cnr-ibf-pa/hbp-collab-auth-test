@@ -20,7 +20,7 @@ function init() {
   }); 
   var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
   console.log(header);
-  document.getElementById().innerHTML = token
+  document.getElementById().innerHTML = session.access_token
   return authorization;
 }
 
