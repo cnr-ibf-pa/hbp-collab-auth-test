@@ -16,11 +16,11 @@ function init() {
   const authorization = client.getToken();
   console.log(authorization)
   authorization.then((session) => {
-    var token = session.access_token;
+	  var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
+	    document.getElementById().innerHTML = session.access_token
+	  console.log(header);
   }); 
-  var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
-  console.log(header);
-  document.getElementById().innerHTML = session.access_token
+  
   return authorization;
 }
 
