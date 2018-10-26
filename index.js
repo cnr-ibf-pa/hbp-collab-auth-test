@@ -22,7 +22,7 @@ document.getElementById("hbp-token").innerHTML = session.access_token;
 console.log(header);
 //$.get(USER_API);
 //$.get(USER_API, header);
-$.getJSON(USER_API, header)
+$.getJSON(USER_API)
     .then(function (response) {
        resolve(response.data);
        console.log(response.data);
