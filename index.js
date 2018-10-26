@@ -17,16 +17,16 @@ const USER_API = 'https://services.humanbrainproject.eu/idm/v1/api/user/me';
 var authorization = client.getToken();
 console.log(authorization)
 authorization.then((session) => {
-var header = {headers: {Authorization: 'Bearer ' + session.access_token}};
+var header = {'headers': {'Authorization': 'Bearer ' + session.access_token}};
 document.getElementById("hbp-token").innerHTML = session.access_token;
 console.log(header);
 //$.get(USER_API);
-//$.get(USER_API, header);
-$.getJSON(USER_API)
-    .then(function (response) {
-       resolve(response.data);
-       console.log(response.data);
- }); 
+$.get(USER_API, header);
+//$.getJSON(USER_API)
+//    .then(function (response) {
+//       resolve(response.data);
+//       console.log(response.data);
+// }); 
   
  
  }); 
