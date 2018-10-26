@@ -12,12 +12,13 @@ function init() {
   } catch (e) {
     console.warn('Issue decoding the token');
   }
-const USER_API = 'https://services.humanbrainproject.eu/idm/v1/api/user/me'
+
+const USER_API = 'https://services.humanbrainproject.eu/idm/v1/api/user/me';
 const authorization = client.getToken();
 console.log(authorization)
 authorization.then((session) => {
 var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
-document.getElementById("hbp-token").innerHTML = session.access_token
+document.getElementById("hbp-token").innerHTML = session.access_token;
 console.log(header);
 this.$http.get(USER_API, header)
     .then(function (response) {
@@ -26,7 +27,6 @@ this.$http.get(USER_API, header)
  }); 
   
   return authorization;
-});
 
 }
 		   
