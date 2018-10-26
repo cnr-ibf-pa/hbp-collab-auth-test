@@ -21,11 +21,11 @@ var header = {headers: {'Authorization': 'Bearer ' + session.access_token}};
 document.getElementById("hbp-token").innerHTML = session.access_token;
 console.log(header);
 $.getJSON(USER_API, header);
-$.getJSON(USER_API, header)
-    .then(function (response) {
-       resolve(response.data);
-       console.log(response.data);
- }); 
+//$.getJSON(USER_API, header)
+//    .then(function (response) {
+//       resolve(response.data);
+//       console.log(response.data);
+// }); 
   
  
  }); 
