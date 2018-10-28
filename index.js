@@ -32,6 +32,7 @@ $.ajax({
     },
     method: 'GET',
     success: function(data){
+	    console.log(data);
         document.getElementById("hbp-user-id").innerHTML = data;
     }
 });
