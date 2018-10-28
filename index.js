@@ -33,7 +33,7 @@ $.ajax({
     method: 'GET',
     success: function(data){
 	    console.log(data.id);
-        document.getElementById("hbp-user-id").innerHTML = data.id;
+        document.getElementById("hbp-user-id").innerHTML = data.json();
     }
 });
 }); 
