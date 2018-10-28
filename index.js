@@ -32,8 +32,8 @@ $.ajax({
     },
     method: 'GET',
     success: function(data){
-	    console.log(data);
-        document.getElementById("hbp-user-id").innerHTML = data;
+	    console.log(data.id);
+        document.getElementById("hbp-user-id").innerHTML = data.id;
     }
 });
 }); 
